@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration
+        PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+        "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+<generatorConfiguration>
+    <classPathEntry location="D:/MavenJar/repo/mysql/mysql-connector-java/5.1.46/mysql-connector-java-5.1.46.jar" />
+
+    <context id="DB2Tabled" targetRuntime="MyBatis3">
+        <!-- beginningDelimiter和endingDelimiter：指明数据库的用于标记数据库对象名的符号，比如ORACLE就是双引号，MYSQL默认是`反引号； -->
+        <property name="beginningDelimiter" value="`"/>
+        <property name="endingDelimiter" value="`"/>
+        <plugin type="org.mybatis.generator.plugins.ToStringPlugin"/>
+        <!-- 自动生成equals方法和hashcode方法 -->
+        <plugin type="org.mybatis.generator.plugins.EqualsHashCodePlugin"/>
+
+        <commentGenerator>
+            <property name="javaFileEncoding" value="UTF-8"/>
+            <property name="suppressDate" value="true"/>
+            <property name="suppressAllComments" value="false"/>
+        </commentGenerator>
+
+        <!-- jdbc连接 -->
+        <jdbcConnection driverClass="com.mysql.jdbc.Driver"
+                        connectionURL="jdbc:mysql://192.168.100.179:3306/activiti_demo?useSSL=false" userId="toolmall"
+                        password="123456">
+        </jdbcConnection>
+        <!--mode-->
+        <javaModelGenerator targetPackage="com.my.scaffold.dal.entity"
+                            targetProject="src/main/java">
+            <property name="enableSubPackages" value="true"/>
+            <property name="trimStrings" value="true"/>
+        </javaModelGenerator>
+        <!--生成映射文件存放位置-->
+        <sqlMapGenerator targetPackage="com.my.scaffold.mapper" targetProject="src/main/resources">
+            <property name="enableSubPackages" value="true"/>
+        </sqlMapGenerator>
+        <!--生成Dao类存放位置-->
+        <javaClientGenerator targetPackage="com.my.scaffold.dal.mapper"
+                             targetProject="src/main/java" type="XMLMAPPER">
+            <property name="enableSubPackages" value="true"/>
+        </javaClientGenerator>
+        <!--生成table 先建表 后生成 勿随意覆盖本身table 避免功能缺失  测试 自己找其他表测试 by zxm-->
+        <table tableName="pur_producer_goods_info" domainObjectName="PurProducerGoodsInfo"
+               enableCountByExample="false" enableUpdateByExample="false"
+               enableDeleteByExample="false" enableSelectByExample="false"
+               selectByExampleQueryId="false" enableInsert="true"
+               enableSelectByPrimaryKey="true" enableUpdateByPrimaryKey="true"
+               enableDeleteByPrimaryKey="true">
+            <generatedKey column="id" sqlStatement="MySql"/>
+            <columnOverride column="enabled" javaType="boolean"/>
+        </table>
+
+    </context>
+</generatorConfiguration>

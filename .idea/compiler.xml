@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="scaffold-core" />
+        <module name="scaffold-sys" />
+        <module name="scaffold-thread" />
+        <module name="scaffold-web" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="my-scaffold" target="1.8" />
+      <module name="scaffold-core" target="1.8" />
+      <module name="scaffold-sys" target="1.8" />
+      <module name="scaffold-thread" target="1.8" />
+      <module name="scaffold-web" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

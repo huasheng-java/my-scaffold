@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/my-scaffold.iml" filepath="$PROJECT_DIR$/my-scaffold.iml" />
+      <module fileurl="file://$PROJECT_DIR$/scaffold-core/scaffold-core.iml" filepath="$PROJECT_DIR$/scaffold-core/scaffold-core.iml" />
+      <module fileurl="file://$PROJECT_DIR$/scaffold-sys/scaffold-sys.iml" filepath="$PROJECT_DIR$/scaffold-sys/scaffold-sys.iml" />
+      <module fileurl="file://$PROJECT_DIR$/scaffold-thread/scaffold-thread.iml" filepath="$PROJECT_DIR$/scaffold-thread/scaffold-thread.iml" />
+      <module fileurl="file://$PROJECT_DIR$/scaffold-web/scaffold-web.iml" filepath="$PROJECT_DIR$/scaffold-web/scaffold-web.iml" />
+    </modules>
+  </component>
+</project>
