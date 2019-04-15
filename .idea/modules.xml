@@ -6,6 +6,7 @@
       <module fileurl="file://$PROJECT_DIR$/scaffold-core/scaffold-core.iml" filepath="$PROJECT_DIR$/scaffold-core/scaffold-core.iml" />
       <module fileurl="file://$PROJECT_DIR$/scaffold-sys/scaffold-sys.iml" filepath="$PROJECT_DIR$/scaffold-sys/scaffold-sys.iml" />
       <module fileurl="file://$PROJECT_DIR$/scaffold-thread/scaffold-thread.iml" filepath="$PROJECT_DIR$/scaffold-thread/scaffold-thread.iml" />
+      <module fileurl="file://$PROJECT_DIR$/scaffold-util/scaffold-util.iml" filepath="$PROJECT_DIR$/scaffold-util/scaffold-util.iml" />
       <module fileurl="file://$PROJECT_DIR$/scaffold-web/scaffold-web.iml" filepath="$PROJECT_DIR$/scaffold-web/scaffold-web.iml" />
     </modules>
   </component>

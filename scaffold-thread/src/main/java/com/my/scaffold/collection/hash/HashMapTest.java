@@ -40,7 +40,8 @@ public class HashMapTest {
         dog1.setId(2);
         dog1.setName("狗狗2号");
 
-        // 体现hash碰撞：key的hashCode()方法返回值一致，需存放在hashMap 底层数组同一位置处。再根据equals（）判断该位置上的链表中是否有相同的，若无则存放在链表头部。
+        // 体现hash碰撞：key的hashCode()方法返回值一致，需存放在hashMap 底层数组同一位置处。
+        // 再根据equals（）判断该位置上的链表中是否有相同的，若无则存放在链表头部。
         map.put(person,dog);
         map.put(person1,dog1);
         System.out.println(map.size());

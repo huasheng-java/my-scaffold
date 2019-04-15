@@ -39,6 +39,9 @@ public class WebLogAspect {
     @Autowired
     private GlobalExceptionHandler exceptionHandle;
 
+    /*****************
+     * 日志类作为类成员变量，多线程下会发生线程安全问题
+     ****************/
     private Log sysLog = null;
 
     @Pointcut("@annotation(com.my.scaffold.annotation.SysLog)")

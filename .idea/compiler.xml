@@ -9,6 +9,7 @@
         <module name="scaffold-core" />
         <module name="scaffold-sys" />
         <module name="scaffold-thread" />
+        <module name="scaffold-util" />
         <module name="scaffold-web" />
       </profile>
     </annotationProcessing>
@@ -17,6 +18,7 @@
       <module name="scaffold-core" target="1.8" />
       <module name="scaffold-sys" target="1.8" />
       <module name="scaffold-thread" target="1.8" />
+      <module name="scaffold-util" target="1.8" />
       <module name="scaffold-web" target="1.8" />
     </bytecodeTargetLevel>
   </component>

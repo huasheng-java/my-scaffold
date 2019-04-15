@@ -22,7 +22,8 @@
 		<module>scaffold-core</module>
 		<module>scaffold-sys</module>
 		<module>scaffold-thread</module>
-	</modules>
+        <module>scaffold-util</module>
+    </modules>
 
 	<properties>
 		<java.version>1.8</java.version>
@@ -68,6 +69,17 @@
 			<version>1.1.1</version>
 		</dependency>
 
+		<!--poi-->
+		<dependency>
+			<groupId>org.apache.poi</groupId>
+			<artifactId>poi</artifactId>
+			<version>3.17</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.poi</groupId>
+			<artifactId>poi-ooxml</artifactId>
+			<version>3.17</version>
+		</dependency>
 
 		<!--工具类-->
 		<dependency>
@@ -222,6 +234,11 @@
 			<dependency>
 				<groupId>com.my.scaffold</groupId>
 				<artifactId>scaffold-thread</artifactId>
+				<version>${scaffold.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.my.scaffold</groupId>
+				<artifactId>scaffold-util</artifactId>
 				<version>${scaffold.version}</version>
 			</dependency>
 			<dependency>

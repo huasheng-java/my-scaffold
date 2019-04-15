@@ -13,7 +13,8 @@ package com.my.scaffold;
  * **************************************************************
  * 修改日期    :
  * 修 改 者    :
- * 修改内容    :
+ * 修改内容    : 有一序列  1、1、2、3、5、8、13、21、34、55、89、144、233 ……
+ 写一方法fun(n)，第n项的值
  * **************************************************************
  */
 public class test {
@@ -26,5 +27,17 @@ public class test {
         int result = Integer.parseInt(num1+num2);
         System.out.println(reault);
         System.out.println(result);
+
+        System.out.println(f(4));
+    }
+
+    public static int f(int n){
+        if (n == 0){
+            return 0;
+        }
+        if (n ==1 || n == 2){
+            return 1;
+        }
+        return f(n-1) + f(n-2);
     }
 }

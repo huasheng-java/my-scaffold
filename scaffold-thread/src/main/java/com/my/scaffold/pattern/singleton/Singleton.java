@@ -20,6 +20,8 @@ public class Singleton {
 
     private volatile static Singleton singleton;
 
+    private int i=0;
+
     private Singleton(){
 
     }
@@ -37,8 +39,15 @@ public class Singleton {
                 }
 
             }
-
         }
         return singleton;
+    }
+
+    public int getI() {
+        return i;
+    }
+
+    public void setI(int i) {
+        this.i = i;
     }
 }

@@ -43,7 +43,7 @@ public class TableController extends BaseController {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(TableController.class);
 
-    private static final String[] keywords = {"public","protected","private","protected","class","interface","abstract","implements","extends","new",
+    private static final String[] keywords = {"public","protected","private","protected","class","interface","abstracts","implements","extends","new",
     "import","package","byte","char","boolean","short","int","float","long","double","void","null","true","false","if","else","while","for","switch",
     "case","default","do","break","continue","return","instanceof","static","final","super","this","native","strictfp","synchronized","transient","volatile",
     "catch","try","finally","throw","throws","enum","assert","throw","throws","this"};

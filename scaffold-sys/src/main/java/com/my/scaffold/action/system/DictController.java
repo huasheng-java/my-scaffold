@@ -43,6 +43,7 @@ public class DictController extends BaseController {
     @SysLog("跳转系统字典页面")
     @ServiceLog
     public String list(){
+        System.out.println("切入点内容");
         return "admin/system/dict/list";
     }
 

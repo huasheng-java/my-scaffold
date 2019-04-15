@@ -26,6 +26,10 @@
             <groupId>com.my.scaffold</groupId>
             <artifactId>scaffold-thread</artifactId>
         </dependency>
+        <dependency>
+            <groupId>com.my.scaffold</groupId>
+            <artifactId>scaffold-util</artifactId>
+        </dependency>
     </dependencies>
     <build>
         <plugins>

@@ -3,6 +3,7 @@ package com.my.scaffold.aspect;
 import jdk.nashorn.internal.scripts.JO;
 import net.sf.jsqlparser.statement.select.Join;
 import org.aspectj.lang.JoinPoint;
+import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.*;
 import org.springframework.stereotype.Component;
 
@@ -13,6 +14,15 @@ import org.springframework.stereotype.Component;
  * 类 名 称    :
  * 功能描述    :服务类日志 AOP切面类
  * 业务描述    :
+ *
+ * 结果：
+ * 切点环绕型增强start......................
+ * 切点方法之前执行
+ * 切入点内容
+ * 切点环绕型增强end......................
+ * 切点方法之后执行
+ * 切点方法返回之后执行
+ *
  * 作 者 名    :@Author Royal(wls)
  * 开发日期    :2019/1/29 14:28
  * Created     :IntelliJ IDEA
@@ -48,8 +58,17 @@ public class ServiceLogAspect {
     }
 
     @Around("serviceLog()")
-    public void doAround(JoinPoint joinPoint){
-        System.out.println("切点环绕型增强");
+    public Object doAround(ProceedingJoinPoint joinPoint) throws Throwable {
+        System.out.println("切点环绕型增强start......................");
+        try {
+            Object obj = joinPoint.proceed();
+            System.out.println("切点环绕型增强end......................");
+            return obj;
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        return null;
     }
 
     @AfterThrowing("serviceLog()")
