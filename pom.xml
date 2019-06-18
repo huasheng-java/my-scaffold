@@ -80,6 +80,13 @@
 			<artifactId>poi-ooxml</artifactId>
 			<version>3.17</version>
 		</dependency>
+		<!-- https://mvnrepository.com/artifact/com.alibaba/dubbo -->
+		<dependency>
+			<groupId>com.alibaba</groupId>
+			<artifactId>dubbo</artifactId>
+			<version>2.6.2</version>
+		</dependency>
+
 
 		<!--工具类-->
 		<dependency>
@@ -140,12 +147,7 @@
 			<scope>runtime</scope>
 		</dependency>
 
-		<!--一如mybatis-generator 代码生成工具-->
-		<dependency>
-			<groupId>org.mybatis.generator</groupId>
-			<artifactId>mybatis-generator-core</artifactId>
-			<version>1.3.6</version>
-		</dependency>
+
 
 		<!--引入swagger-->
 		<dependency>

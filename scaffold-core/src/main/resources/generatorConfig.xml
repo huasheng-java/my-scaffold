@@ -3,7 +3,7 @@
         PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
         "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
 <generatorConfiguration>
-    <classPathEntry location="D:/MavenJar/repo/mysql/mysql-connector-java/5.1.46/mysql-connector-java-5.1.46.jar" />
+    <classPathEntry location="D:/MavenJar/repo/com/microsoft/sqlserver/sqljdbc4/4.0/sqljdbc4-4.0.jar" />
 
     <context id="DB2Tabled" targetRuntime="MyBatis3">
         <!-- beginningDelimiter和endingDelimiter：指明数据库的用于标记数据库对象名的符号，比如ORACLE就是双引号，MYSQL默认是`反引号； -->
@@ -17,12 +17,13 @@
             <property name="javaFileEncoding" value="UTF-8"/>
             <property name="suppressDate" value="true"/>
             <property name="suppressAllComments" value="false"/>
+            <property name="addRemarkComments" value="true"/>
         </commentGenerator>
 
         <!-- jdbc连接 -->
-        <jdbcConnection driverClass="com.mysql.jdbc.Driver"
-                        connectionURL="jdbc:mysql://192.168.100.179:3306/activiti_demo?useSSL=false" userId="toolmall"
-                        password="123456">
+        <jdbcConnection driverClass="com.microsoft.sqlserver.jdbc.SQLServerDriver"
+                        connectionURL="jdbc:sqlserver://10.254.183.55:1433;DatabaseName=toolmall-erp-test" userId="sa"
+                        password="Bp133ls4">
         </jdbcConnection>
         <!--mode-->
         <javaModelGenerator targetPackage="com.my.scaffold.dal.entity"
@@ -40,13 +41,13 @@
             <property name="enableSubPackages" value="true"/>
         </javaClientGenerator>
         <!--生成table 先建表 后生成 勿随意覆盖本身table 避免功能缺失  测试 自己找其他表测试 by zxm-->
-        <table tableName="pur_producer_goods_info" domainObjectName="PurProducerGoodsInfo"
+        <table tableName="pur_stockout_order_trade" domainObjectName="PurStockoutOrderTrade"
                enableCountByExample="false" enableUpdateByExample="false"
                enableDeleteByExample="false" enableSelectByExample="false"
                selectByExampleQueryId="false" enableInsert="true"
                enableSelectByPrimaryKey="true" enableUpdateByPrimaryKey="true"
                enableDeleteByPrimaryKey="true">
-            <generatedKey column="id" sqlStatement="MySql"/>
+            <generatedKey column="id" sqlStatement="SqlServer" identity="true"/>
             <columnOverride column="enabled" javaType="boolean"/>
         </table>
 
