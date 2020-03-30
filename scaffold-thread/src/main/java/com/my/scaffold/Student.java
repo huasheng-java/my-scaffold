@@ -17,21 +17,24 @@ package com.my.scaffold;
  * **************************************************************
  */
 public class Student extends People {
+    public static int _i=0 ;
+
     static {
         System.out.println("子类的静态初始化块");
     }
     {
         System.out.println("子类的初始化块");
     }
+
     Student(){
         System.out.println("子类的构造函数");
     }
-
     static {
         _i = 1;
     }
-    public static int _i=0 ;
+
     public static void main(String[] args){
         System.out.println(_i);
+        Student student = new Student();
     }
 }

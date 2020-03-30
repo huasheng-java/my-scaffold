@@ -1,5 +1,7 @@
 package com.my.scaffold.core;
 
+import java.math.BigDecimal;
+
 /**
  * **************************************************************
  * 公司名称    :杭州巨星科技股份有限公司
@@ -18,8 +20,25 @@ package com.my.scaffold.core;
  */
 public class Test {
 
+    public static void change(String a,String b){
+        a = b;
+        b = b+a;
+    }
+
+    public static void change(StringBuffer a,StringBuffer b){
+        a = b;
+        b.append(a);
+    }
     public static void main(String[] args) {
-        SonA sonA = new SonA();
-        System.out.println(sonA.staticString);
+        String a = "hello";
+        String b = "world";
+        change(a,b);
+        System.out.println(a +"  "+b);
+
+        StringBuffer c = new StringBuffer("hello");
+        StringBuffer d = new StringBuffer("world");
+        change(c,d);
+        System.out.println(c +"  "+ d);
+
     }
 }

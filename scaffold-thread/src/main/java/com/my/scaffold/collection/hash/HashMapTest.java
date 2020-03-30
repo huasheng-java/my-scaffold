@@ -22,7 +22,8 @@ import java.util.Map;
 public class HashMapTest {
 
     public static void main(String[] args) {
-        Map<Person,Dog> map = new HashMap<>();
+
+        HashMap<Person,Dog> map = new HashMap<>();
 
         Person person = new Person();
         person.setId(1);

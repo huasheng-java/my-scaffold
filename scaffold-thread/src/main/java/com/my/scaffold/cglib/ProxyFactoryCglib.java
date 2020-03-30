@@ -46,7 +46,7 @@ public class ProxyFactoryCglib implements MethodInterceptor {
 
 
     @Override
-    public Object intercept(Object o, Method method, Object[] objects, MethodProxy methodProxy) throws Throwable {
+        public Object intercept(Object o, Method method, Object[] objects, MethodProxy methodProxy) throws Throwable {
         System.out.println("开始事务....");
 
         // 执行目标对象的方法

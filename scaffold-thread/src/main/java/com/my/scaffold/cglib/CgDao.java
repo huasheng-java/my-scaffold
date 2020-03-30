@@ -16,9 +16,14 @@ package com.my.scaffold.cglib;
  * 修改内容    :
  * **************************************************************
  */
-public class CgDao {
+public class CgDao implements CgDaoAbstract{
 
     public void save(){
         System.out.println("CGlib 已经保存");
+    }
+
+    @Override
+    public void say() {
+        System.out.println("JDK已经保存");
     }
 }

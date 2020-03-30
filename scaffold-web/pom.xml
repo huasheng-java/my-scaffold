@@ -16,10 +16,6 @@
     <dependencies>
         <dependency>
             <groupId>com.my.scaffold</groupId>
-            <artifactId>scaffold-core</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>com.my.scaffold</groupId>
             <artifactId>scaffold-sys</artifactId>
         </dependency>
         <dependency>

@@ -19,25 +19,27 @@ package com.my.scaffold;
  */
 public class test {
 
-    public static void main(String[] args) {
-        String num1 = "1";
-        String num2 = "1";
+    public static int _i=0 ;
 
-        int reault = Integer.valueOf(num1+num2,2);
-        int result = Integer.parseInt(num1+num2);
-        System.out.println(reault);
-        System.out.println(result);
+    static {
+        _i = 1;
+        System.out.println("我是静态代码块");
+    }
+    test(){
 
-        System.out.println(f(4));
+    }
+    test(int i){
+        _i = i;
+    }
+    public static void main(String[] args){
+        System.out.println(_i);
+        test t1 = new test(2);
+        test t2 = new test();
+        System.out.println(_i);
+        System.out.println(t2._i);
     }
 
-    public static int f(int n){
-        if (n == 0){
-            return 0;
-        }
-        if (n ==1 || n == 2){
-            return 1;
-        }
-        return f(n-1) + f(n-2);
-    }
+
+
+
 }

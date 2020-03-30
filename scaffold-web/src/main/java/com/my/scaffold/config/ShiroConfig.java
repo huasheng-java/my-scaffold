@@ -81,7 +81,7 @@ public class ShiroConfig {
         filterChainDefinitionMap.put("/v2/**","anon");
         filterChainDefinitionMap.put("/swagger-resources/**","anon");
         filterChainDefinitionMap.put("/systemLogout","authc");
-//        filterChainDefinitionMap.put("/**","authc");
+        filterChainDefinitionMap.put("/**","authc");
         bean.setFilterChainDefinitionMap(filterChainDefinitionMap);
         return bean;
     }
