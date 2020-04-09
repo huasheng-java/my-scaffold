@@ -16,15 +16,7 @@
     <dependencies>
         <dependency>
             <groupId>com.my.scaffold</groupId>
-            <artifactId>scaffold-sys</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>com.my.scaffold</groupId>
-            <artifactId>scaffold-thread</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>com.my.scaffold</groupId>
-            <artifactId>scaffold-util</artifactId>
+            <artifactId>scaffold-mySite</artifactId>
         </dependency>
     </dependencies>
     <build>

@@ -1,7 +1,7 @@
 package com.my.sacffold.controller;
 
 import com.my.scaffold.SkuService;
-import com.my.dubbo.model.Sku;
+import com.my.scaffold.model.Sku;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;

@@ -18,13 +18,14 @@
 	
 	<modules>
 		<module>scaffold-web</module>
-		<module>scaffold-sys</module>
 		<module>scaffold-thread</module>
         <module>scaffold-util</module>
         <module>scaffold-mvc</module>
         <module>scaffold-dubbo-provider</module>
         <module>scaffold-dubbo-interface</module>
         <module>scaffold-dubbo-customer</module>
+        <module>scaffold-sys</module>
+        <module>scaffold-mySite</module>
     </modules>
 
 	<properties>
@@ -65,11 +66,49 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-freemarker</artifactId>
 		</dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-thymeleaf</artifactId>
+        </dependency>
 		<dependency>
 			<groupId>org.mybatis.spring.boot</groupId>
 			<artifactId>mybatis-spring-boot-starter</artifactId>
 			<version>1.1.1</version>
 		</dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-logging</artifactId>
+        </dependency>
+
+        <!-- 关闭thymeleft强校验 -->
+        <dependency>
+            <groupId>net.sourceforge.nekohtml</groupId>
+            <artifactId>nekohtml</artifactId>
+            <version>1.9.22</version>
+        </dependency>
+
+        <!--过滤emoji字符-->
+        <dependency>
+            <groupId>com.vdurmont</groupId>
+            <artifactId>emoji-java</artifactId>
+            <version>3.2.0</version>
+        </dependency>
+
+
+
+
+        <!--markdown处理-->
+        <dependency>
+            <groupId>com.atlassian.commonmark</groupId>
+            <artifactId>commonmark</artifactId>
+            <version>0.8.0</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.atlassian.commonmark</groupId>
+            <artifactId>commonmark-ext-gfm-tables</artifactId>
+            <version>0.8.0</version>
+        </dependency>
 
 		<!--poi-->
 		<dependency>
@@ -96,11 +135,18 @@
 			<artifactId>hutool-all</artifactId>
 			<version>3.3.0</version>
 		</dependency>
-		<dependency>
-			<groupId>com.alibaba</groupId>
-			<artifactId>druid</artifactId>
-			<version>1.1.10</version>
-		</dependency>
+        <dependency>
+            <groupId>cn.hutool</groupId>
+            <artifactId>hutool-core</artifactId>
+            <version>4.1.17</version>
+        </dependency>
+        <!-- alibaba的druid数据库连接池 -->
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>druid-spring-boot-starter</artifactId>
+            <version>1.1.9</version>
+        </dependency>
+
 		<dependency>
 			<groupId>com.alibaba</groupId>
 			<artifactId>fastjson</artifactId>
@@ -115,12 +161,6 @@
 			<groupId>commons-codec</groupId>
 			<artifactId>commons-codec</artifactId>
 			<version>${commons-codec.version}</version>
-		</dependency>
-		<!-- 七牛JAR -->
-		<dependency>
-			<groupId>com.qiniu</groupId>
-			<artifactId>qiniu-java-sdk</artifactId>
-			<version>[7.2.0, 7.2.99]</version>
 		</dependency>
 		<!--阿里云OSS上传-->
 		<dependency>
@@ -170,6 +210,13 @@
 			<version>${guava.version}</version>
 		</dependency>
 
+        <!-- 分页插件 -->
+        <dependency>
+            <groupId>com.github.pagehelper</groupId>
+            <artifactId>pagehelper-spring-boot-starter</artifactId>
+            <version>1.2.5</version>
+        </dependency>
+
 		<!--shiro begin-->
 		<dependency>
 			<groupId>org.apache.shiro</groupId>
@@ -198,7 +245,14 @@
 			<artifactId>shiro-redis</artifactId>
 			<version>${shiro-redis.version}</version>
 		</dependency>
-		<!--shiro end-->
+
+        <dependency>
+            <groupId>redis.clients</groupId>
+            <artifactId>jedis</artifactId>
+            <version>2.9.0</version>
+        </dependency>
+
+        <!--shiro end-->
 
 
 		<dependency>
@@ -219,22 +273,17 @@
 			<version>${mybatisplus.version}</version>
 		</dependency>
 
-        <!--  Quartz      -->
-        <dependency>
-            <groupId>org.quartz-scheduler</groupId>
-            <artifactId>quartz</artifactId>
-            <version>2.3.0</version>
-        </dependency>
+<!--        &lt;!&ndash;  Quartz      &ndash;&gt;-->
+<!--        <dependency>-->
+<!--            <groupId>org.quartz-scheduler</groupId>-->
+<!--            <artifactId>quartz</artifactId>-->
+<!--            <version>2.3.0</version>-->
+<!--        </dependency>-->
 	</dependencies>
 
 	<!--声明依赖项，子项目需要显示的引用才能继承-->
 	<dependencyManagement>
 		<dependencies>
-			<dependency>
-				<groupId>com.my.scaffold</groupId>
-				<artifactId>scaffold-sys</artifactId>
-				<version>${scaffold.version}</version>
-			</dependency>
 			<dependency>
 				<groupId>com.my.scaffold</groupId>
 				<artifactId>scaffold-thread</artifactId>
@@ -258,6 +307,16 @@
             <dependency>
                 <groupId>com.my.scaffold</groupId>
                 <artifactId>scaffold-dubbo-provider</artifactId>
+                <version>${scaffold.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.my.scaffold</groupId>
+                <artifactId>scaffold-mySite</artifactId>
+                <version>${scaffold.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.my.scaffold</groupId>
+                <artifactId>scaffold-sys</artifactId>
                 <version>${scaffold.version}</version>
             </dependency>
 		</dependencies>
