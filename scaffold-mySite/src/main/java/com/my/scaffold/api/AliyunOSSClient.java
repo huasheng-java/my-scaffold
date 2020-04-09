@@ -5,7 +5,8 @@ import com.aliyun.oss.OSSClient;
 import com.aliyun.oss.model.GetObjectRequest;
 import com.aliyun.oss.model.OSSObject;
 import com.aliyun.oss.model.ObjectMetadata;
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 import org.springframework.web.multipart.MultipartFile;
@@ -23,7 +24,7 @@ import java.util.Date;
  */
 @Component
 public class AliyunOSSClient {
-    private static Logger logger = Logger.getLogger(AliyunOSSClient.class);
+    private static Logger logger = LogManager.getLogger(AliyunOSSClient.class);
 
     private static OSSClient ossClient;
     @Value("${oss.endpoint}")
