@@ -4,37 +4,20 @@
 <div th:replace="site/head::head(${commons.site_title()},${commons.google_site_verification()}, ${commons.baidu_site_verification()})"></div>
 
 <body>
-
-
 <!-- header -->
-
 <div th:replace="site/header::header"></div>
-
 <!-- header -->
-
 <!-- main -->
-
 <main role="main-inner-wrapper" class="container">
-
-
     <div class="row">
-
-
         <!-- Left -->
         <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 ">
-
             <article role="pge-title-content" class="blog-header">
-
                 <header>
-
-                    <h2><span>Blog</span> write by luis</h2>
-
+                    <h2><span>博客</span> write by wls</h2>
                 </header>
-
-                <p>Some technical blogs and life logs about Java.</p>
-
+                <p>不积跬步无以至千里.</p>
             </article>
-
             <ul class="grid-lod effect-2" id="grid">
                 <th:block th:each="article,articleStat : ${articles.list}">
                     <th:block th:if="${articleStat.index % 2 != 0}">
