@@ -77,7 +77,7 @@ public class ThreadTest implements Runnable {
         }
     }
 
-    @Override
+
     public void run() {
         numModel.setAnInt(10);
 

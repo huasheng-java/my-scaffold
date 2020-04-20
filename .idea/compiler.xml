@@ -6,20 +6,30 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="scaffold-core" />
         <module name="scaffold-sys" />
-        <module name="scaffold-thread" />
         <module name="scaffold-util" />
+        <module name="scaffold-core" />
         <module name="scaffold-web" />
+        <module name="scaffold-dubbo-customer" />
+        <module name="scaffold-dubbo-interface" />
+        <module name="scaffold-mvc" />
+        <module name="scaffold-dubbo-provider" />
+        <module name="scaffold-thread" />
+        <module name="scaffold-mySite" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="my-scaffold" target="1.8" />
+      <module name="my-scaffold" target="1.5" />
       <module name="scaffold-core" target="1.8" />
-      <module name="scaffold-sys" target="1.8" />
-      <module name="scaffold-thread" target="1.8" />
-      <module name="scaffold-util" target="1.8" />
-      <module name="scaffold-web" target="1.8" />
+      <module name="scaffold-dubbo-customer" target="1.5" />
+      <module name="scaffold-dubbo-interface" target="1.5" />
+      <module name="scaffold-dubbo-provider" target="1.5" />
+      <module name="scaffold-mvc" target="1.8" />
+      <module name="scaffold-mySite" target="1.5" />
+      <module name="scaffold-sys" target="1.5" />
+      <module name="scaffold-thread" target="1.5" />
+      <module name="scaffold-util" target="1.5" />
+      <module name="scaffold-web" target="1.5" />
     </bytecodeTargetLevel>
   </component>
 </project>
