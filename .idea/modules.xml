@@ -3,7 +3,6 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/my-scaffold.iml" filepath="$PROJECT_DIR$/my-scaffold.iml" />
-      <module fileurl="file://$PROJECT_DIR$/scaffold-core/scaffold-core.iml" filepath="$PROJECT_DIR$/scaffold-core/scaffold-core.iml" />
       <module fileurl="file://$PROJECT_DIR$/scaffold-dubbo-customer/scaffold-dubbo-customer.iml" filepath="$PROJECT_DIR$/scaffold-dubbo-customer/scaffold-dubbo-customer.iml" />
       <module fileurl="file://$PROJECT_DIR$/scaffold-dubbo-interface/scaffold-dubbo-interface.iml" filepath="$PROJECT_DIR$/scaffold-dubbo-interface/scaffold-dubbo-interface.iml" />
       <module fileurl="file://$PROJECT_DIR$/scaffold-dubbo-provider/scaffold-dubbo-provider.iml" filepath="$PROJECT_DIR$/scaffold-dubbo-provider/scaffold-dubbo-provider.iml" />
